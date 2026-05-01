@@ -21,7 +21,7 @@ def now():
 
 
 def get_task_status(task):
-    task_time = datetime.strptime(task[2], "%Y-%m-%d %H:%M:%S")  # ✅ FIXED
+    task_time = datetime.strptime(task[2], "%Y-%m-%d %H:%M:%S")
     if task[3]:
         return "✔️ Done"
     elif task_time < now():
@@ -94,6 +94,7 @@ html, body, [class*="css"], .stApp {
     border-radius: 8px;
     padding: 0.35rem 0.9rem;
 }
+
 .section-header {
     font-size: 1.05rem;
     font-weight: 700;
@@ -102,6 +103,7 @@ html, body, [class*="css"], .stApp {
     border-bottom: 1px solid rgba(74,158,255,0.15);
     margin-bottom: 1rem;
 }
+
 .task-card {
     background: rgba(20,40,90,0.35);
     border: 1px solid rgba(74,158,255,0.12);
@@ -131,29 +133,60 @@ html, body, [class*="css"], .stApp {
     margin: 0.5rem 0 1.5rem 0;
 }
 .metric-card {
-    border-radius: 12px;
-    padding: 1rem 0.5rem;
+    border-radius: 14px;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.07);
+    position: relative;
+    overflow: hidden;
 }
-.mc-total   { background: linear-gradient(135deg, #1e3a6e, #162d56); }
-.mc-done    { background: linear-gradient(135deg, #064e35, #053d29); border-color: rgba(52,211,153,0.2) !important; }
-.mc-pending { background: linear-gradient(135deg, #4a3000, #3a2500); border-color: rgba(251,191,36,0.2) !important; }
-.mc-expired { background: linear-gradient(135deg, #4a1010, #3a0c0c); border-color: rgba(248,113,113,0.2) !important; }
+.metric-card::after {
+    content: '';
+    position: absolute;
+    top: -18px; right: -18px;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+}
+.mc-total {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 6px 22px rgba(37,99,235,0.5);
+    border: 1px solid rgba(147,197,253,0.35);
+}
+.mc-done {
+    background: linear-gradient(135deg, #059669, #047857);
+    box-shadow: 0 6px 22px rgba(5,150,105,0.5);
+    border: 1px solid rgba(110,231,183,0.35);
+}
+.mc-pending {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    box-shadow: 0 6px 22px rgba(217,119,6,0.5);
+    border: 1px solid rgba(253,211,77,0.35);
+}
+.mc-expired {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    box-shadow: 0 6px 22px rgba(220,38,38,0.5);
+    border: 1px solid rgba(252,165,165,0.35);
+}
+.metric-icon {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
 .metric-label {
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.68rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    color: rgba(200,220,255,0.5);
-    margin: 0 0 0.3rem 0;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.75);
+    margin: 0 0 0.35rem 0;
 }
 .metric-value {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    color: #fff;
+    color: #ffffff;
     margin: 0;
     line-height: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .btn-done button {
@@ -204,6 +237,7 @@ html, body, [class*="css"], .stApp {
     transform: translateY(-2px) !important;
     box-shadow: 0 7px 20px rgba(37,99,235,0.6) !important;
 }
+
 .stTextInput > label,
 .stDateInput > label,
 .stTimeInput > label {
@@ -299,18 +333,22 @@ st.markdown('<div class="section-header">📊 Overview</div>', unsafe_allow_html
 st.markdown(f"""
 <div class="metric-grid">
     <div class="metric-card mc-total">
+        <span class="metric-icon">📋</span>
         <p class="metric-label">Total</p>
         <p class="metric-value">{total}</p>
     </div>
     <div class="metric-card mc-done">
+        <span class="metric-icon">✅</span>
         <p class="metric-label">Done</p>
         <p class="metric-value">{done}</p>
     </div>
     <div class="metric-card mc-pending">
+        <span class="metric-icon">⏳</span>
         <p class="metric-label">Pending</p>
         <p class="metric-value">{pending}</p>
     </div>
     <div class="metric-card mc-expired">
+        <span class="metric-icon">❌</span>
         <p class="metric-label">Expired</p>
         <p class="metric-value">{expired}</p>
     </div>
