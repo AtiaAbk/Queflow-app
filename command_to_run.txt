@@ -1,0 +1,13 @@
+%to set the environment run this command to the terminal 
+1. set up a virtual environment to run the project
+2.install all the required packages
+
+copy this commands and paste it to the terminal
+
+pip install -r requirements.txt
+pip freeze > requirements.txt
+
+3. run main.py
+4. for ui representation  paste it to the terminal 
+>_ 
+    streamlit run app.py
