@@ -7,7 +7,7 @@ copy this commands and paste it to the terminal
 pip install -r requirements.txt
 pip freeze > requirements.txt
 
-3. run main.py
+3. run quaeflow.py
 4. for ui representation  paste it to the terminal 
 >_ 
-    streamlit run app.py
+    streamlit run quaeflow.py
