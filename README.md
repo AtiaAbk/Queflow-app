@@ -108,6 +108,10 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## Author
+Atia Sanjida 
+Student (ICE)
+Bangladesh Army University of Engineering and Technology (BAUET) 
+atia.abk@gmail.com 
 
 Built with ☕ and Python.  
 Feel free to fork, improve, and contribute.
