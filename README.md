@@ -109,9 +109,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 Atia Sanjida 
-Student (ICE)
-Bangladesh Army University of Engineering and Technology (BAUET) 
-atia.abk@gmail.com 
+- 📧 Email: atia.abk@gmail.com
+- 🔗 LinkedIn: [linkedin.com/in/your-profile](https://www.linkedin.com/in/atia-oishe-085947233/)
+- 💻 GitHub: [github.com/your-username](https://github.com/atiaabk)
 
-Built with ☕ and Python.  
-Feel free to fork, improve, and contribute.
+
