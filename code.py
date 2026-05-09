@@ -4,9 +4,7 @@ import time
 
 tasks = []
 
-# -----------------------------
-# TIME FUNCTIONS
-# -----------------------------
+
 def get_current_time():
     return datetime.now()
 
@@ -20,9 +18,7 @@ def get_task_status(task):
     else:
         return "Not Done"
 
-# -----------------------------
-# UI
-# -----------------------------
+
 def show_header():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n")
@@ -30,9 +26,7 @@ def show_header():
     print("   CURRENT DATE & TIME:", get_current_time().strftime("%B %d %Y , %I:%M %p"))
     print("===================================================\n")
 
-# -----------------------------
-# DATE PARSER
-# -----------------------------
+
 def parse_datetime(date, time_str):
     formats = [
         "%Y-%m-%d %H:%M",
@@ -48,9 +42,7 @@ def parse_datetime(date, time_str):
             continue
     return None
 
-# -----------------------------
-# ADD TASK
-# -----------------------------
+
 def add_task():
     show_header()
 
@@ -80,9 +72,7 @@ def add_task():
     print("Task added successfully!")
     input("Press Enter...")
 
-# -----------------------------
-# VIEW TASKS
-# -----------------------------
+
 def view_tasks():
     show_header()
 
@@ -99,9 +89,7 @@ def view_tasks():
 
     input("\nPress Enter...")
 
-# -----------------------------
-# MARK DONE
-# -----------------------------
+
 def mark_done():
     view_tasks()
     try:
@@ -115,9 +103,7 @@ def mark_done():
         print("Invalid input!")
     input("Press Enter...")
 
-# -----------------------------
-# DELETE TASK
-# -----------------------------
+
 def delete_task():
     view_tasks()
     try:
@@ -131,9 +117,7 @@ def delete_task():
         print("Invalid input!")
     input("Press Enter...")
 
-# -----------------------------
-# MAIN LOOP
-# -----------------------------
+
 try:
     while True:
         show_header()
