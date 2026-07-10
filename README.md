@@ -111,6 +111,6 @@ This project is licensed under the [MIT License](LICENSE).
 Atia Sanjida 
 - 📧 Email: atia.abk@gmail.com
 - 🔗 LinkedIn: [linkedin.com/in/your-profile](https://www.linkedin.com/in/atia-oishe-085947233/)
-- 💻 GitHub: [github.com/your-username] (https://www.linkedin.com/in/atia-sanjida-085947233/)
+- 💻 GitHub: [github.com/your-username](https://www.linkedin.com/in/atia-sanjida-085947233/)
 
 
