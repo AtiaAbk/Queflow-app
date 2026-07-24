@@ -15,9 +15,6 @@ c.execute("""
 """)
 conn.commit()
 
-
-
-
 def now():
     return datetime.now()
 
